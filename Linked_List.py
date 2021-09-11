@@ -76,10 +76,11 @@ class LinkedList:
         while temp is not None:
             if element == temp.get_element:
                 print('Element is found!')
-                return
+                return True
             else:
                 temp = temp.next_node
         print('Element is not found in the List')
+        return False
 
     def remove_element(self, element):
         temp = self.head
@@ -108,8 +109,8 @@ class LinkedList:
             else:
                 temp_p = temp
                 temp = temp.next_node
-        print('Element is not found in the List')
-        return
+        print(f"Element {element} is not found in the List")
+
 
     def show_elements(self):
         temp = self.head
